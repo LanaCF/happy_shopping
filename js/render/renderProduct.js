@@ -65,10 +65,11 @@ function getProductById(productId) {
 function addToCartHandler() {
     const productId = this.dataset.id;
     const selectedProduct = getProductById(productId);
-    console.log('cart1', cart);
+
     if (selectedProduct) {
         cart.push(selectedProduct);
-        quantity.innerHTML = cart.length;
+        updateCartQuantity(cart.length);
+        // quantity.innerHTML = cart.length;
         console.log('cart2', cart);
         saveLocalStorage();
     }
@@ -78,17 +79,31 @@ function addToCartHandler() {
     console.log('click', id);
 }
 
+function updateCartQuantity(newQuantity) {
+    quantity.innerHTML = newQuantity;
+}
+
 // localStorage.clear(); // Очищує localStorage, наприклад, від даних попередніх задач
 
 function saveLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
     localStorage.setItem('cartLength', String(cart.length));  
     console.log('Data saved:', cart.length);
 }
   
 function getLocalStorage() {
-    const getData = localStorage.getItem('cartLength');    
-    console.log('Data loaded:', getData);
-    return parseInt(getData) || 0;
+    const getData = localStorage.getItem('cart');
+    const parsedData = JSON.parse(getData);
+
+    if (parsedData && Array.isArray(parsedData)) {
+        cart.push(...parsedData);
+        return parsedData.length;
+    }
+
+    return 0;
+    // const getData = localStorage.getItem('cartLength');    
+    // console.log('Data loaded:', getData);
+    // return parseInt(getData) || 0;
 }
 
 function popupWindow(selector, productId) {
