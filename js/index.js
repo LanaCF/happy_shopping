@@ -9,5 +9,6 @@ renderProduct('.products', products[4]);
 renderProduct('.products', products[5]);
 renderProduct('.products', products[6]);
 
+// import { popupWindow } from './render/popupWindow.js';
 
-
+// popupWindow('.popup-window', products[2]);
