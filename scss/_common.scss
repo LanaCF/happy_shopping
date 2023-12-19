@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.header-wrapper {
+    height: 100px;
+    background-color: rgb(33, 70, 86);
+    color: white;
+}
+
+.header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    
+}
+
+.name-shop {
+    font-weight: bold;
+    font-size: 35px;
+    transition: .3s;
+}
+
+.name-shop:hover {
+    cursor: pointer;
+    color: rgb(158, 193, 208);
+    transform: scale(1.2);
+}
+
+.shopping-car-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 125px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.shopping-cart {
+    width: 50px;
+    transition: .3s;
+}
+
+.quantity {
+    color: rgb(33, 70, 86);
+    font-size: 21px;
+    transition: .3s;
+}
+
+.shopping-car-box:hover .quantity,
+.shopping-car-box:hover .shopping-cart {
+    cursor: pointer;
+    transform: scale(1.2);
+    font-size: 27px;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.main__title {
+    text-align: center;
+    margin: 25px 0;
+    font-weight: bold;
+    font-size: 25px;
+}
