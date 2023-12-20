@@ -1,5 +1,6 @@
 import products from './data/products.js';
 import { renderProduct } from './render/renderProduct.js';
+import { renderCart } from './render/listAddProduct.js';
 
 renderProduct('.products', products[0]);
 renderProduct('.products', products[1]);
@@ -8,6 +9,8 @@ renderProduct('.products', products[3]);
 renderProduct('.products', products[4]);
 renderProduct('.products', products[5]);
 renderProduct('.products', products[6]);
+
+renderCart();
 
 // import { popupWindow } from './render/popupWindow.js';
 
