@@ -5,6 +5,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
     display: none;
 }
 
@@ -13,6 +14,7 @@
     position: absolute;
     top: 50px;
     right: 100px;
+    z-index: 1000;
     cursor: pointer;
 }
 
@@ -50,14 +52,14 @@
 
 .product-add-title {
     font-weight: bold;
-    width: 270px;
+    width: 250px;
     text-align: center;
     font-size: 14px;
 }
 
 .product-add-quan-sum {
     font-weight: bold;
-    width: 75px;
+    width: 100px;
     text-align: center;
     font-size: 14px;
 }

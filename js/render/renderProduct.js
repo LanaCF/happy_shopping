@@ -1,7 +1,7 @@
 import products from '../data/products.js';
 
 const quantity = document.querySelector('.quantity');
-const cart = [];
+let cart = [];
 const display = document.querySelector('.bg-popup-window');
 const imgCloseBtn = document.querySelector('.close-img-bg');
 const popWin = document.querySelector('.popup-window');
@@ -133,4 +133,4 @@ function getLocalStorage() {
 }
 
 
-export { cart, saveLocalStorage, getLocalStorage };
+export { cart, quantity, updateCartQuantity, saveLocalStorage, getLocalStorage };

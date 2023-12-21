@@ -10,7 +10,7 @@ renderProduct('.products', products[4]);
 renderProduct('.products', products[5]);
 renderProduct('.products', products[6]);
 
-renderCart();
+// renderCart();
 
 // import { popupWindow } from './render/popupWindow.js';
 
