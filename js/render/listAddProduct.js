@@ -56,22 +56,24 @@ export const renderCart = () => {
         boxQuantity.append(quantityEl);
         boxSum.append(sum);
 
-        // для додавання чи віднімання кількості одного виду товара
+        const minQuantity = document.querySelectorAll('.minus-img');
+        const maxQuantity = document.querySelectorAll('.plus-img');
 
-        // imgDel.onclick = function() {
-        //     const productIdAdd = cartItem.id;
-        //     const indexToRemove = cart.findIndex(product => product.id === productIdAdd);
+        console.log('555', minQuantity);
 
-        //     if (indexToRemove !== -1) {
-        //         cart.splice(indexToRemove, 1);
-        //     }
+        minQuantity.onclick = function() {
+            const productIdMin = cartItem.id;
+            const indexToRemoveMin = cart.findIndex(product => product.id === productIdMin);
 
-        //     updateCartQuantity(cart.length);
-        //     block.remove();
-        //     addBlockProducts.innerHTML = '';
-        //     renderCart();
-        //     saveLocalStorage();
-        // };
+            if (indexToRemoveMin !== -1) {
+                cart.splice(indexToRemoveMin, 1);
+            }
+
+            updateCartQuantity(cart.length);
+            block.remove();
+            renderCart();
+            saveLocalStorage();
+        };
 
         imgDel.onclick = function() {
             const productIdToRemove = cartItem.id;
