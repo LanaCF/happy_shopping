@@ -61,19 +61,19 @@ export const renderCart = () => {
 
         console.log('555', minQuantity);
 
-        minQuantity.onclick = function() {
-            const productIdMin = cartItem.id;
-            const indexToRemoveMin = cart.findIndex(product => product.id === productIdMin);
+        // minQuantity.onclick = function() {
+        //     const productIdMin = cartItem.id;
+        //     const indexToRemoveMin = cart.findIndex(product => product.id === productIdMin);
 
-            if (indexToRemoveMin !== -1) {
-                cart.splice(indexToRemoveMin, 1);
-            }
+        //     if (indexToRemoveMin !== -1) {
+        //         cart.splice(indexToRemoveMin, 1);
+        //     }
 
-            updateCartQuantity(cart.length);
-            block.remove();
-            renderCart();
-            saveLocalStorage();
-        };
+        //     updateCartQuantity(cart.length);
+        //     block.remove();
+        //     renderCart();
+        //     saveLocalStorage();
+        // };
 
         imgDel.onclick = function() {
             const productIdToRemove = cartItem.id;
@@ -146,5 +146,3 @@ function formatCartData() {
     });
     return formatData;
 }
-
-
